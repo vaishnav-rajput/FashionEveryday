@@ -1,3 +1,4 @@
+
 const App = () => {
   return (
     <div>
@@ -7,3 +8,5 @@ const App = () => {
 };
 
 export default App;
+
+//to fetch data from slice use the hook useSelector()
