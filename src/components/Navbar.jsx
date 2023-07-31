@@ -6,7 +6,7 @@ const Navbar = () => {
   return (
   <div>
     <div className="flex flex-row justify-between">
-      <NavLink to={}>
+      <NavLink to="/">
         <div>
           <img src="#"/>
         </div>
@@ -17,7 +17,7 @@ const Navbar = () => {
           </NavLink>
           <NavLink to="/cart">
             <div>
-              <FaShoppingCart/>
+                <FaShoppingCart/>
             </div>
           </NavLink>
         </div>
