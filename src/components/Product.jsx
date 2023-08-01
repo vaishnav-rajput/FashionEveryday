@@ -1,8 +1,20 @@
-import { useSelector } from "react-redux";
+import { toast } from "react-hot-toast";
+import { useDispatch, useSelector } from "react-redux";
 
 const Product = ({post}) => {
 
   const {cart} = useSelector((state) => state)
+  const dispatch = useDispatch()
+
+  const addToCart = () => {
+    dispatch(add(post))
+    toast.success("Item added to Cart")
+  }
+
+  const removeFromCart = () => {
+    dispatch(remove(post.id))
+    toast.success("Item removed from Cart")
+  }
 
   return (
     <div>

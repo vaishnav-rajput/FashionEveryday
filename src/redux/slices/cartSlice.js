@@ -4,8 +4,13 @@ export const CartSlice = createSlice({
     name: "cart",
     initialState: [],
     reducers: {
-        add: () => {},
-        remove: () => {},
+        add: (state, action) => {
+            //action.payload indicates the input parameters provided to function
+            state.push(action.payload)
+        },
+        remove: (state, action ) => {
+            state.pop(action.payload)
+        },
     }
 }) 
 
