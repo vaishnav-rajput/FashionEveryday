@@ -1,4 +1,9 @@
+import { useSelector } from "react-redux";
+
 const Product = ({post}) => {
+
+  const {cart} = useSelector((state) => state)
+
   return (
     <div>
       <div>
@@ -13,11 +18,23 @@ const Product = ({post}) => {
       <div>
         <p>{post.price}</p>
       </div>
-      <button>
+      {/* <button>
         {
           false ? <p>Remove Item</p> : <p>Add to Cart</p>
         }
-      </button>
+      </button> */}
+
+      {
+        cart.some((p) => p.id == post.id) ? 
+        (<button
+        onClick={removeFromCart}
+        >
+          Remove Item
+        </button>) :
+        (<button onClick={addToCart}>
+          Add To Cart
+        </button>) 
+      }
     </div>
   )
 };
