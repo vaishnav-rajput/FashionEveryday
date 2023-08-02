@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 const Cart = () => {
 
   const {cart} = useSelector((state) => state)
+  console.log("#3", cart)
   const [totalAmount, setTotalAmount] = useState(0)
 
   useEffect(() => {
@@ -19,9 +20,9 @@ const Cart = () => {
               <div>
                 <div>
                 {
-                  cart.map((item, index) => (
-                    <CartItem  key={item.id} item={item} itemIndex={index}/>
-                  )) 
+                  cart.map((item, index) => {
+                    return <CartItem  key={item.id} item={item} itemIndex={index}/>
+                    }) 
                 } 
                 </div>
                 <div>

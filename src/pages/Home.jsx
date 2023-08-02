@@ -42,7 +42,9 @@ const Home = () => {
         ) :
         (
           <div>
-            No post found
+            <p>
+               No post found
+            </p>
           </div>  
         )
       }
